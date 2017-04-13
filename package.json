@@ -1,0 +1,36 @@
+{
+  "name": "application-menu",
+  "version": "1.0.0",
+  "description": "Accessable application style menu component",
+  "engines": {
+    "node": "^6.9.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "grunt build",
+    "build:watch": "grunt build:watch"
+  },
+  "author": "Somar Design Studios",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-notify": "^0.4.5",
+    "grunt-postcss": "^0.8.0",
+    "grunt-scss-lint": "^0.5.0",
+    "load-grunt-tasks": "^3.5.2",
+    "pixrem": "^3.0.2",
+    "sass-lint": "^1.9.1",
+    "semver": "^5.3.0"
+  }
+}
