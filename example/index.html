@@ -8,6 +8,19 @@
         <link rel="stylesheet" type="text/css" href="../dist/application-menu.css">
     </head>
     <body>
+        <div class="application-menu">
+            <div class="application-menu__inner">
+                <button class="application-menu__button" role="button" aria-pressed="false" data-target="#my-menu">
+                    Menu
+                </button>
+                <ul id="my-menu" class="application-menu__menu" role="menu" aria-haspopup="true" aria-expanded="false">
+                    <li class="application-menu__item" role="menuitem">Item 1</li>
+                    <li class="application-menu__item" role="menuitem">Item 2</li>
+                    <li class="application-menu__item" role="menuitem">Item 3</li>
+                </ul>
+            </div>
+        </div>
+
         <script src="../dist/index.js"></script>
     </body>
 </html>

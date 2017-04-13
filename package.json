@@ -1,11 +1,11 @@
 {
   "name": "application-menu",
   "version": "1.0.0",
-  "description": "Accessable application style menu component",
+  "description": "Accessible \"application\" style menu with no dependencies.",
   "engines": {
     "node": "^6.9.0"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "grunt build",
     "build:watch": "grunt build:watch"

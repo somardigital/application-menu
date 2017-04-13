@@ -82,23 +82,7 @@ module.exports = (grunt) => {
           '<%= proj.style_src %>/{,*/}*.scss',
           '<%= proj.script_src %>/{,*/}*.js',
         ],
-        tasks: ['sass', 'postcss', 'uglify', 'notify'],
-        options: {
-          livereload: true,
-        },
-      },
-
-      style: {
-        files: '<%= proj.style_src %>/{,*/}*.scss',
         tasks: ['sass', 'postcss', 'notify'],
-        options: {
-          livereload: true,
-        },
-      },
-
-      script: {
-        files: '<%= proj.script_src %>/{,*/}*.js',
-        tasks: ['uglify', 'notify'],
         options: {
           livereload: true,
         },
