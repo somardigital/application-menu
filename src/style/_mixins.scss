@@ -1,0 +1,17 @@
+@import "variables";
+
+@mixin breakpoint-xs-up() {
+  @media only screen and (min-width: $application-menu-breakpoint-xs) { @content; }
+}
+
+@mixin breakpoint-sm-up() {
+  @media only screen and (min-width: $application-menu-breakpoint-sm) { @content; }
+}
+
+@mixin breakpoint-md-up() {
+  @media only screen and (min-width: $application-menu-breakpoint-md) { @content; }
+}
+
+@mixin breakpoint-lg-up() {
+  @media only screen and (min-width: $application-menu-breakpoint-lg) { @content; }
+}

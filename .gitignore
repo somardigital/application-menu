@@ -3,4 +3,5 @@
 *.min.map
 .sass-cache/
 node_modules/
+npm-debug.log
 scss-lint-report.xml
