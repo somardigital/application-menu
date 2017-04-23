@@ -1,5 +1,18 @@
 import ApplicationMenu from './ApplicationMenu.js';
 
+function isDescendant(element, ancestorClassName) {
+  let node = element.parentNode;
+
+  while (node !== null) {
+    if (node.classList !== undefined && node.classList.contains(ancestorClassName)) {
+      return true;
+    }
+    node = node.parentNode;
+  }
+
+  return false;
+}
+
 function init() {
   const elements = document.querySelectorAll('.application-menu');
   const applicationMenus = [];
@@ -11,13 +24,15 @@ function init() {
   elements.forEach((element) => {
     applicationMenus.push(new ApplicationMenu(element));
   });
+
+  // Automatically close menus when the user clicks away.
+  document.addEventListener('click', (event) => {
+    if (!isDescendant(event.target, 'application-menu')) {
+      applicationMenus.forEach((menu) => {
+        menu.close();
+      });
+    }
+  });
 }
 
 init();
-
-// Automatically close menus user click away.
-// $(document).click(function (event) {
-//   if ($(event.target).closest('.application-menu').length === 0) {
-//     closeAll();
-//   }
-// });
