@@ -82,19 +82,6 @@ var _ApplicationMenu2 = _interopRequireDefault(_ApplicationMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function isDescendant(element, ancestorClassName) {
-  var node = element.parentNode;
-
-  while (node !== null) {
-    if (node.classList !== undefined && node.classList.contains(ancestorClassName)) {
-      return true;
-    }
-    node = node.parentNode;
-  }
-
-  return false;
-}
-
 function init() {
   var elements = document.querySelectorAll('.application-menu');
   var applicationMenus = [];
@@ -109,11 +96,11 @@ function init() {
 
   // Automatically close menus when the user clicks away.
   document.addEventListener('click', function (event) {
-    if (!isDescendant(event.target, 'application-menu')) {
-      applicationMenus.forEach(function (menu) {
+    applicationMenus.forEach(function (menu) {
+      if (menu.el !== event.target && !menu.el.contains(event.target)) {
         menu.close();
-      });
-    }
+      }
+    });
   });
 }
 
