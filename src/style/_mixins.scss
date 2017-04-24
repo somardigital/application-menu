@@ -1,5 +1,3 @@
-@import "variables";
-
 @mixin breakpoint-xs-up() {
   @media only screen and (min-width: $application-menu-breakpoint-xs) { @content; }
 }
