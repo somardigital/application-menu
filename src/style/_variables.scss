@@ -1,6 +1,7 @@
-$application-menu-link-color-large: #2196f3;
-$application-menu-link-color-small: #2196f3;
-$application-menu-menu-color-expanded: #eceff1;
+$application-menu-breakpoint-xs: 480px;
+$application-menu-breakpoint-sm: 768px;
+$application-menu-breakpoint-md: 992px;
+$application-menu-breakpoint-lg: 1200px;
 
 $application-menu-button-text-color-default: #fff;
 $application-menu-button-text-color-hover-focus: #fff;
@@ -10,7 +11,8 @@ $application-menu-button-background-color-default: #607d8b;
 $application-menu-button-background-color-hover-focus: #b0bec5;
 $application-menu-button-background-color-pressed: #2196f3;
 
-$application-menu-breakpoint-xs: 480px;
-$application-menu-breakpoint-sm: 768px;
-$application-menu-breakpoint-md: 992px;
-$application-menu-breakpoint-lg: 1200px;
+$application-menu-menu-background-color-expanded-small: #eceff1;
+$application-menu-menu-background-color-expanded-large: #eceff1;
+
+$application-menu-link-text-color-large: #2196f3;
+$application-menu-link-text-color-small: #2196f3;

@@ -41,17 +41,18 @@
   &[aria-expanded="true"] {
     display: block;
     padding: 1rem 2rem;
-    background-color: $application-menu-menu-color-expanded;
+    background-color: $application-menu-menu-background-color-expanded-small;
+
+    @include breakpoint-sm-up() {
+      padding: 2rem 1rem;
+      background-color: $application-menu-menu-background-color-expanded-large;
+    }
   }
 
   @include breakpoint-sm-up() {
     position: absolute;
     width: 230px;
     z-index: 10;
-
-    &[aria-expanded="true"] {
-      padding: 2rem 1rem;
-    }
   };
 
   .application-menu--right & {
@@ -73,19 +74,19 @@
 }
 
 .application-menu__link {
-  color: $application-menu-link-color-small;
+  color: $application-menu-link-text-color-small;
 
   &:focus,
   &:hover {
-    color: $application-menu-link-color-small;
+    color: $application-menu-link-text-color-small;
   }
 
   @include breakpoint-sm-up() {
-    color: $application-menu-link-color-large;
+    color: $application-menu-link-text-color-large;
 
     &:focus,
     &:hover {
-      color: $application-menu-link-color-large;
+      color: $application-menu-link-text-color-large;
     }
   };
 }
