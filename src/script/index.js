@@ -8,9 +8,9 @@ function init() {
     return;
   }
 
-  elements.forEach((element) => {
-    applicationMenus.push(new ApplicationMenu(element));
-  });
+  for (let i = 0; i < elements.length; i += 1) {
+    applicationMenus.push(new ApplicationMenu(elements[i]));
+  }
 
   // Automatically close menus when the user clicks away.
   document.addEventListener('click', (event) => {

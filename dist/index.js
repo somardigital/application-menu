@@ -90,9 +90,9 @@ function init() {
     return;
   }
 
-  elements.forEach(function (element) {
-    applicationMenus.push(new _ApplicationMenu2.default(element));
-  });
+  for (var i = 0; i < elements.length; i += 1) {
+    applicationMenus.push(new _ApplicationMenu2.default(elements[i]));
+  }
 
   // Automatically close menus when the user clicks away.
   document.addEventListener('click', function (event) {
