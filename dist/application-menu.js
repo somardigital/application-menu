@@ -72,7 +72,6 @@ var ApplicationMenu = function () {
 
 exports.default = ApplicationMenu;
 
-
 },{}],2:[function(require,module,exports){
 'use strict';
 
@@ -105,6 +104,5 @@ function init() {
 }
 
 init();
-
 
 },{"./ApplicationMenu.js":1}]},{},[2]);

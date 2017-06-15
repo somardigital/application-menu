@@ -55,23 +55,14 @@ module.exports = (grunt) => {
       },
     },
 
-    babel: {
-      options: {
-        sourceMap: true,
-        presets: ['es2015'],
-      },
-      dist: {
-        files: {
-          '<%= proj.dist %>/ApplicationMenu.js': '<%= proj.script_src %>/ApplicationMenu.js',
-          '<%= proj.dist %>/index.js': '<%= proj.script_src %>/index.js',
-        },
-      },
-    },
-
     browserify: {
       dist: {
-        files: {
-          '<%= proj.dist %>/index.js': '<%= proj.dist %>/index.js',
+        src: [
+          '<%= proj.script_src %>/index.js',
+        ],
+        dest: '<%= proj.dist %>/application-menu.js',
+        options: {
+          transform: [['babelify', { presets: ['es2015'] }]],
         },
       },
     },
@@ -101,7 +92,6 @@ module.exports = (grunt) => {
   grunt.registerTask('build', [
     'sass',
     'postcss',
-    'babel',
     'browserify',
     'notify',
   ]);
@@ -109,7 +99,6 @@ module.exports = (grunt) => {
   grunt.registerTask('build:watch', [
     'sass',
     'postcss',
-    'babel',
     'browserify',
     'notify',
     'watch:build',
