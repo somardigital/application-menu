@@ -1,6 +1,6 @@
 {
   "name": "application-menu",
-  "version": "1.1.0",
+  "version": "2.1.0",
   "description": "Accessible \"application\" style menu with no dependencies.",
   "engines": {
     "node": "^6.9.0"
