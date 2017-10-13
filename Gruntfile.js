@@ -62,8 +62,19 @@ module.exports = (grunt) => {
         ],
         dest: '<%= proj.dist %>/application-menu.js',
         options: {
-          transform: [['babelify', { presets: ['es2015'] }]],
+          transform: [['babelify', { presets: ['env'] }]],
         },
+      },
+    },
+
+    uglify: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= proj.dist %>',
+          src: '*.js',
+          dest: '<%= proj.dist %>',
+        }],
       },
     },
 
@@ -93,6 +104,7 @@ module.exports = (grunt) => {
     'sass',
     'postcss',
     'browserify',
+    'uglify',
     'notify',
   ]);
 
@@ -100,6 +112,7 @@ module.exports = (grunt) => {
     'sass',
     'postcss',
     'browserify',
+    'uglify',
     'notify',
     'watch:build',
   ]);

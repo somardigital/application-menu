@@ -28,5 +28,34 @@
         </div>
 
         <script src="../dist/application-menu.js"></script>
+
+        <script>
+            // Custom behaviour.
+            var menu = document.querySelector('.application-menu');
+
+            menu.addEventListener('press.application-menu', function () {
+                console.log('Menu button pressed');
+            });
+
+            menu.addEventListener('unpress.application-menu', function () {
+                console.log('Menu button unpressed');
+            });
+
+            menu.addEventListener('expand.application-menu', function () {
+                console.log('Menu expanded');
+            });
+
+            menu.addEventListener('contract.application-menu', function () {
+                console.log('Menu contracted');
+            });
+
+            menu.addEventListener('open.application-menu', function () {
+                console.log('Menu opened');
+            });
+
+            menu.addEventListener('close.application-menu', function () {
+                console.log('Menu closed');
+            });
+        </script>
     </body>
 </html>
