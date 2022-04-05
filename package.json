@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "description": "Accessible \"application\" style menu with no dependencies.",
   "engines": {
-    "node": "^6.9.0"
+    "node": ">=6.9.0"
   },
   "main": "dist/index.js",
   "scripts": {
